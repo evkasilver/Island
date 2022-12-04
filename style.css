@@ -1,0 +1,382 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+*, :after, :before { box-sizing: border-box; }
+
+/*
+ BARVY
+ pozadi     #f5f5f5
+ Jedeme retro cernobile, dnes barvy nepotrebujeme.
+*/
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* HLAVICKA */
+.hlavicka {
+    position: relative;
+}
+
+.hlavicka-text {
+    position: absolute;
+    top: 15%; 
+    left: 15%; 
+    transform: translate (-50%,-50%);
+    width: 70%;
+}
+
+.hlavicka-obr {
+    width:100%;
+    height:auto;
+    opacity:0.9;
+    radial-gradient(circle, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+}
+
+.titulek {
+    font-family: 'Raleway', serif;
+    font-size: 80px;
+    color:white;
+    text-align:center;
+    margin: 10px;
+}
+
+.perex {
+    font-family: 'Raleway', serif;
+    font-size:20px;
+    color:white;
+    text-align:center; 
+}
+
+.obdelnik {
+width:100px;
+height:1.5px;
+background-color:white;
+position: relative;
+left: 43.5%;
+}
+
+.autor {
+    color:white;
+    text-align:center;
+    font-style:italic;
+}
+
+/* MENU */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    list-style-type: none;
+    padding: 10px; 
+    margin: 30px; 
+    width: 20%;
+    float: left;
+    width: 20%;
+}
+
+.menu > li {
+    text-transform: uppercase;
+    height: 30px;
+    border-width: 0.2px;
+    border-bottom-style: solid; 
+    border-color: lightgrey;   
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+  }
+  
+ 
+/* OBSAH */
+
+.uvod {
+    padding: 20px;
+    display: block;
+    float: left;
+  width: 70%;
+  }
+
+
+.obsah {
+    box-shadow: 0 0 5px 5px lightgray;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    top: -100px;
+    width: 960px;
+}
+
+.obsah-img {
+    width: 100%;
+    transition: 0.3s;
+    display: block;
+}
+
+
+.proc {
+    align-content: left;
+    width: 80%;
+    padding: 0px 0px 0px 40px;
+}
+
+.obdelnik1 {
+width:100px;
+height:3px;
+background-color:rgb(94, 168, 230);
+position: relative;
+left: -40px;
+margin: 20px 0 40px 0;
+}
+
+.mustsee {
+margin: 1% 5% 5% 20%;
+}
+
+.skogafoss {
+margin: 1% 5% 5% 20%;
+}
+
+.obdelnik2 {
+    width:100px;
+    height:3px;
+    background-color:rgb(94, 168, 230);
+    position: relative;
+    left: -30px;
+    margin: 20px 0 40px 0;
+    }
+
+/* FOTOGALERIE */
+.fotogalerie {
+    margin: 60px 0px 0px 60px;  
+}
+
+.obdelnik1 {
+    width:100px;
+    height:3px;
+    background-color:rgb(94, 168, 230);
+    position: relative;
+    right: -10px;
+    margin: 20px 0 40px 40px;
+    }
+
+.popisek_odstavec {
+    text-align: right;
+    color: white;
+    position: relative;
+    top: -60px;
+    margin-right: 20px;
+}
+
+    .popisek_odstavec
+    a:link, a:visited, a:hover, a:active {
+    color: white;
+    text-decoration: underline;
+      }
+        
+    
+
+.galerie {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;   
+    width: 100%;
+}
+
+.foto img {
+    width: 100%;
+    display: block;
+    height:auto;
+}
+
+.foto {
+    width: 33.33334%;
+    position: relative;
+    overflow: hidden;
+}
+
+.popisek {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: 0.3s;
+    position: absolute;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    display:block;
+    transform:translateY(60px);
+    overflow:hidden;
+}
+
+.foto:hover .popisek {
+    transform: translateY(-55px);
+}
+
+
+/* PATICKA */
+
+.paticka {
+margin: 0 0 0 13%;
+color: grey;
+}
+
+.paticka
+a:link, a:visited, a:hover, a:active {
+color: grey;
+text-decoration: underline;
+  }
+
+  /*MEDIA QUERY*/
+@media only screen and (max-width: 1000px) {
+    .foto {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+body {
+font-size: 12px;
+}    
+
+
+.hlavicka-text {
+    position: absolute;
+    top: 5%; 
+    left: 10%; 
+    transform: translate (-50%,-50%);
+    width: 80%;
+}
+
+.titulek {
+ font-size: 50px;   
+}
+
+.perex {
+font-size: 14px;
+}
+
+.obsah {
+    width: auto;
+    position: relative;
+    top: 0;
+    }
+
+.obdelnik {
+    width:100px;
+    height:1.5px;
+    background-color:white;
+    position: relative;
+        }
+
+.menu {
+flex-direction: row;
+width: 95%;
+justify-items: space-evenly;
+float: none;
+}
+
+.menu > li {
+    flex: 25%;
+    display:inline-block;
+    line-height: 100%;
+    border: solid; 
+    border-width: 0.2px; 
+    border-color: lightgrey;
+    text-align:center;
+    padding-top: 6px;
+}
+
+.uvod , .proc , .mustsee , .skogafoss{
+width: 100%;
+display: block;
+padding: 20px;
+margin: 5px;
+}
+.paticka {
+    margin: 0 0 0 20px;
+    color: grey;
+    }
+}
+
+ @media only screen and (max-width: 500px) {
+
+ .foto {
+    flex: 100%;
+    max-width: 100%;
+}
+
+.obsah {
+width: auto;
+}
+
+.obdelnik {
+    width:80px;
+    height:0.5px;
+    background-color:white;
+    position: relative;
+    left: 40%;
+    }
+
+.menu {
+    flex-direction: column;
+    width: 90%;
+    justify-items: space-evenly;
+    }
+    
+.menu > li {
+        flex: 100%;
+        border: solid; 
+        border-width: 0.2px; 
+        border-color: lightgrey;
+    }
+
+body {
+    font-size: 10px;
+        }    
+        
+.titulek {
+    font-size: 40px;   
+        }        
+
+.perex {
+    font-size: 11px;
+        }
+
+.popisek {
+    width: 100%;
+    background-color:white;
+    color:grey;
+    transition:none;
+    position: relative;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    line-height: 1.6;
+    display:block;
+    transform:none;
+    overflow:auto;
+    text-align:center;
+    font-weight:bold;
+        }
+
+.popisek
+    a:link, a:visited, a:hover, a:active {
+    color: grey;
+    text-decoration: underline;
+      } 
+
+.popisek-copy  {
+    font-weight:lighter;
+}
+      
+.foto:hover .popisek {
+    transform:none;
+        }
+
+}
+
